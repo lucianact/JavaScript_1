@@ -27,7 +27,7 @@ def get_odd_indices(items):
 
     return result
 
-print(get_odd_indices([1, 'hello', True, 500]))
+#print(get_odd_indices([1, 'hello', True, 500]))
 
 def print_as_numbered_list(items):
     i = 1
@@ -37,11 +37,18 @@ def print_as_numbered_list(items):
 
         i += 1
 
-print_as_numbered_list([1,'hello', True])
+#print_as_numbered_list([1,'hello', True])
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    nums = []
 
+    for num in range(start, stop):
+        nums.append(num)
+
+    return nums
+
+#print(get_range(0, 5))
+    
 
 def censor_vowels(word):
     pass  # TODO: replace this line with your code
