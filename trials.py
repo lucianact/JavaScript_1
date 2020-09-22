@@ -51,8 +51,17 @@ def get_range(start, stop):
     
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+    chars = []
 
+    for letter in word:
+        if letter in 'aeiou':
+            chars.append('*')
+
+        chars.append(letter)
+
+    return ''.join(chars)
+
+#print(censor_vowels('hello'))
 
 def snake_to_camel(string):
     pass  # TODO: replace this line with your code
