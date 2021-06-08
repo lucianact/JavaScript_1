@@ -313,3 +313,70 @@ function kidsGame(names) {
 
   return output;
 }
+
+
+// 6. printIndices
+function printIndices(items) {
+  for (const i in items) {
+    console.log(`${items[i]} ${i}`);
+  }
+  // or
+  // items.forEach((item, i) => {
+  //  console.log(`${item} ${i}`);
+  // });
+}
+
+
+// 7. everyOtherItem
+function everyOtherItem(items) {
+  const resultItems = [];
+
+  for (const i in items) {
+    if (i % 2 === 0) {
+      resultItems.push(items[i]);
+    }
+  }
+
+  console.log(resultItems);
+}
+
+// 8. smallestNItems
+function smallestNItems(items, n) {
+  const sortedItems = items.sort((a, b) => a - b).slice(0, n);
+  sortedItems.reverse();
+
+  console.log(sortedItems);
+}
+
+
+// 9. countWords
+function countWords(phrase) {
+  const wordCounts = {};
+
+  for (const word of phrase.split(' ')) {
+    if (wordCounts[word]) {
+      wordCounts[word] += 1;
+    } else {
+      wordCounts[word] = 1;
+    }
+  }
+
+  return wordCounts;
+};
+
+
+// 10. getMelonsAtPrice
+function getMelonsAtPrice(price) {
+  const melonPrices = {
+    2.50: ['Cantaloupe', 'Honeydew'],
+    2.95: ['Watermelon'],
+    3.25: ['Musk', 'Crenshaw'],
+    14.25: ['Christmas']
+  };
+
+  if (!melonPrices[price]) {
+    return;
+  }
+
+  return melonPrices[price].sort();
+};
